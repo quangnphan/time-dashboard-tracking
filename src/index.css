@@ -1,13 +1,225 @@
-body {
+@import url("https://fonts.googleapis.com/css2?family=Rubik:wght@300;400;500&display=swap");
+
+*{
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+  padding: 0;
+  box-sizing: border-box;
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+body{
+  font-family: 'Rubik', sans-serif;
+  font-size: 18px;
+  background-color: hsl(226, 43%, 10%);
+  color: #fff;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  width: 100vw;
+}
+
+section{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.profile-wrapper{
+  background: hsl(235, 46%, 20%);
+  border-radius: 1rem;
+  margin-right: 15px;
+}
+.profile-card{
+  background: hsl(246, 80%, 60%);
+  padding: 30px;
+  border-radius: 1rem;
+  width: 250px;
+}
+.profile-card img{
+  width: 80px;
+  border: 2px solid #fff;
+  border-radius: 50%;
+  margin-bottom: 30px;
+}
+.profile-card p{
+  font-weight: 300;
+  margin-bottom: 10px;
+  color: hsl(236, 100%, 87%);
+}
+.profile-card h2{
+  font-weight: 300;
+  font-size: 2rem;
+  margin-bottom: 30px;
+}
+.profile-options{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+  padding: 20px 30px;
+}
+.profile-options button{
+  font-size: 1rem;
+  border: none;
+  background: none;
+  margin: 15px 0;
+  cursor: pointer;
+}
+.base{
+  color: hsl(235, 45%, 61%);
+}
+.active{
+  color: #fff;
+}
+.profile-options button:hover{
+  color: #fff;
+}
+.card-list{
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+}
+.card{
+  width: 230px;
+  height: 230px;
+  border-radius: 1rem;
+  display: flex;
+  align-items: flex-end;
+  margin: 15px;
+}
+#Work{
+  background: hsl(15, 100%, 70%);
+  background-image: url('./images/icon-work.svg'); 
+  background-repeat: no-repeat;
+  background-position: top -7px right 15px;
+  background-size: 30%;
+}
+#Play{
+  background: hsl(195, 74%, 62%);
+  background-image: url('./images/icon-play.svg'); 
+  background-repeat: no-repeat;
+  background-position: top -7px right 15px;
+  background-size: 30%;
+}
+#Study{
+  background: hsl(348, 100%, 68%);
+  background-image: url('./images/icon-study.svg'); 
+  background-repeat: no-repeat;
+  background-position: top -7px right 15px;
+  background-size: 30%;
+}
+#Exercise{
+  background: hsl(145, 58%, 55%);
+  background-image: url('./images/icon-exercise.svg'); 
+  background-repeat: no-repeat;
+  background-position: top -7px right 15px;
+  background-size: 30%;
+}
+#Social{
+  background: hsl(264, 64%, 52%);
+  background-image: url('./images/icon-social.svg'); 
+  background-repeat: no-repeat;
+  background-position: top -7px right 15px;
+  background-size: 30%;
+}
+#SelfCare{
+  background: hsl(43, 84%, 65%);
+  background-image: url('./images/icon-self-care.svg'); 
+  background-repeat: no-repeat;
+  background-position: top -7px right 15px;
+  background-size: 30%;
+}
+.contentWrapper{
+  background: hsl(235, 46%, 20%);
+  width: 230px;
+  height: 190px;
+  border-radius: 0.9rem;
+  padding: 20px;
+  cursor: pointer;
+}
+.contentWrapper:hover{
+  opacity: 0.9;
+}
+.header{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.current{
+  font-size: 3rem;
+  margin: 25px 0 5px 0;
+}
+.previous{
+  color: hsl(235, 45%, 61%);
+}
+@media (max-width: 600px){
+  body{
+    height: auto;
+    width: auto;
+  }
+  section{
+    flex-direction: column;
+  }
+  .card-list{
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 60px;
+  }
+  .card{
+    width: 300px;
+    height: 160px;
+  }
+  .contentWrapper{
+    width: 100%;
+    height: 120px;
+  }
+  .profile-wrapper{
+    margin-top: 100px;
+    width: 300px;
+    height: 180px;
+    margin: 100px auto 15px auto;
+  }
+  .profile-card{
+    width: 300px;
+    height: 120px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px;
+  }
+  .profile-card img{
+    width: 65px;
+    height: 65px;
+    margin-top: 25px;
+  }
+  .profile-card h2{
+    font-size: 1.3rem;
+  }
+  .profile-card div{
+    margin-top: 25px;
+  }
+  .profile-options{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+  }
+  .profile-options button{
+    margin: 0;
+  }
+  .header h2{
+    font-size: 1.5rem;
+  }
+  .current{
+    font-size: 1.8rem;
+    margin: 0;
+  }
+  .previous{
+    font-size: 1rem;
+  }
+  .timeframe{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 15px;
+  }
 }
