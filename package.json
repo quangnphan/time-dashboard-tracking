@@ -2,7 +2,7 @@
   "name": "time-tracking-dashboard",
   "version": "0.1.0",
   "private": true,
-  "home": "http://quangnphan.github.io/time-dashboard",
+  "home": "http://quangnphan.github.io/time-dashboard-tracking",
   "dependencies": {
     "@testing-library/jest-dom": "^5.14.1",
     "@testing-library/react": "^11.2.7",
